@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class meja extends Model
 {
     use HasFactory;
+
+    protected $table = 'meja';
+    protected $fillable = ['nomor_meja','kapasitas','status'];
 }

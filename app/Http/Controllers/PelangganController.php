@@ -62,9 +62,14 @@ class PelangganController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePelangganRequest $request, Pelanggan $pelanggan)
+    public function update(PelangganRequest $request, Pelanggan $pelanggan)
     {
-        //
+        try {
+            $data = $pelanggan->update($request->all());
+            return response()->json(['status' => true, 'message' => ' update data sukses', 'data' => $data]);
+        } catch (Exception | PDOException $e) {
+            return response()->json(['status' => false, 'message' => 'gagal update data', 'error_type' => $e]);
+        }
     }
 
     /**
@@ -72,6 +77,11 @@ class PelangganController extends Controller
      */
     public function destroy(Pelanggan $pelanggan)
     {
-        //
+        try {
+            $data = $pelanggan->delete();
+            return Response()->json(['status' => true, 'message' => 'data has been deleted', 'data' => $data]);
+        } catch (Exception | PDOException $e) {
+            return Response()->json(['status' => false, 'message' => 'data failed to delete']);
+        }
     }
 }

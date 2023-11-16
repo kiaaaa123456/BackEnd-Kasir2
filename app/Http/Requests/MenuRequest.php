@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Contracts\Validation\Validator;
 
-class PelangganRequest extends FormRequest
+class MenuRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,10 +23,10 @@ class PelangganRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama' => 'required',
-            'email' => 'required',
-            'nomor_telepon' => 'required',
-            'alamat' => 'required',
+            'jenis_id' => 'required',
+            'nama_menu' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
         ];
     }
 
