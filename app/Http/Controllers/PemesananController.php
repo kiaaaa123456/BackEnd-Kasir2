@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PemesananRequest;
 use App\Models\pemesanan;
-use App\Http\Requests\StorepemesananRequest;
-use App\Http\Requests\UpdatepemesananRequest;
 use Exception;
 use PDOException;
 

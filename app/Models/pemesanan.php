@@ -10,5 +10,5 @@ class pemesanan extends Model
     use HasFactory;
 
     protected $table = 'pemesanan';
-    protected $guarded = ['id'];
+    protected $fillable = ['meja_id','tanggal_pemesanan','jam_mulai','jam_selesai','nama_pemesan','jumlah_pelanggan'];
 }

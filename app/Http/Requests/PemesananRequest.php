@@ -23,12 +23,12 @@ class PemesananRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'meja_id' => 'required',
+            'meja_id'   => 'required',
             'tanggal_pemesanan' => 'required',
             'jam_mulai' => 'required',
-            'jam_selesai' => 'required',
-            'nama_pemesanan' => 'required',
-            'jumlah_pelanggan' => 'required',
+            'jam_selesai'   => 'required',
+            'nama_pemesan'  => 'required',
+            'jumlah_pelanggan'  => 'required',
         ];
     }
 
